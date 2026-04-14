@@ -21,5 +21,8 @@ profile.cov
 go.work
 go.work.sum
 
+# GoReleaser
+dist/
+
 # env file
 .env

@@ -11,6 +11,11 @@ fuzzing runs. `gofuzzmin` fixes this.
 
 ## Install
 
+Pre-built binaries for Linux, macOS, and Windows are available on the
+[releases page](https://github.com/die-net/gofuzzmin/releases).
+
+Or install from source:
+
 ```
 go install github.com/die-net/gofuzzmin@latest
 ```
@@ -82,6 +87,20 @@ matters because Go's `-coverprofile` measures a different, coarser signal
 
 Only the build cache corpus is touched. Seeds in `testdata/fuzz/` are never
 deleted — they serve as regression tests.
+
+## Development
+
+Run tests (use `-short` to skip the integration test):
+
+```
+go test ./...
+```
+
+Run the linter ([golangci-lint v2](https://golangci-lint.run/)):
+
+```
+golangci-lint run .
+```
 
 ## License
 
